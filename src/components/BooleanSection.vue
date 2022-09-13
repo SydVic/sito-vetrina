@@ -2,7 +2,9 @@
   <!-- CONTAINER -->
   <div class="container" id="boolean">
 
-    <SectionTitle :title="title"/>
+    <SectionTitle
+    :title="title"
+    :css="css"/>
 
     <!-- CAROUSEL 3D -->
     <carousel-3d>
@@ -29,6 +31,7 @@
     },
     props: {
       title: String,
+      css: String,
     },
     data: function() {
       return {

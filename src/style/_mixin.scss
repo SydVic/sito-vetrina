@@ -18,7 +18,7 @@
 }
 
 // gradient sezione about me
-@mixin boolean-gradient-color {
+@mixin aboutme-gradient-color {
   background: rgb(255,255,255);
   background: linear-gradient(8deg, rgba(255,255,255,1) 41%, rgba(222,89,0,1) 65%);
 }

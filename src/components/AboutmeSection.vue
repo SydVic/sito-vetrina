@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <SectionTitle :title="title"/>
+    <SectionTitle
+    :title="title"
+    :css="css"/>
   </div>
 </template>
 
@@ -14,13 +16,11 @@
       },
       props: {
         title: String,
+        css: String,
       },
   }
 </script>
 
 <style lang="scss" scoped>
-  h1 {
-    color: white;
-  }
 
 </style>

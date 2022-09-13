@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title" :class="css">{{ title }}</h1>
   </div>
 </template>
 
@@ -9,6 +9,7 @@ export default {
   name: "SectionTitle",
   props: {
     title: String,
+    css: String
   }
 }
 </script>
@@ -20,6 +21,14 @@ export default {
   .title {
     text-align: center;
     font-size: 2rem;
+  }
+
+  .aboutme-title {
+    @include aboutme-gradient-color();
+    @include text-gradient-attributes();
+  }
+
+  .boolean-title {
     @include boolean-gradient-color();
     @include text-gradient-attributes();
   }

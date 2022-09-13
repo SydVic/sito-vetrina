@@ -6,11 +6,15 @@
     <!-- /HEADER -->
 
     <!-- ABOUT ME SECTION -->
-    <AboutmeSection :title="aboutmeTitle"/>
+    <AboutmeSection
+    :title="aboutmeTitle"
+    :css="aboutmeCssClass"/>
     <!-- /ABOUT ME SECTION -->
 
     <!-- BOOLEAN SECTION -->
-    <BooleanSection :title="booleanTitle"/>
+    <BooleanSection
+    :title="booleanTitle"
+    :css="booleanCssClass"/>
     <!-- /BOOLEAN SECTION -->
 
 
@@ -32,7 +36,9 @@
   data: function() {
     return {
       aboutmeTitle: "Su di me",
+      aboutmeCssClass: "aboutme-title",
       booleanTitle: "Lavori Boolean",
+      booleanCssClass: "boolean-title",
     }
   }
 }
