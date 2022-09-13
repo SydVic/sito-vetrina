@@ -7,7 +7,6 @@
 
     <!-- SECTION CAROUSEL -->
       <SectionTitle :title="booleanTitle"/>
-
       <!-- CAROUSEL 3D -->
       <carousel-3d>
         <slide v-for="(object, index) in projects" :key="index" :index="index">

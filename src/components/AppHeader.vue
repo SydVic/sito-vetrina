@@ -30,12 +30,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/variables.scss";
+  // GOOGLE FONTS Press Start 2P
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+  @import "../style/_variables.scss";
 
   .header {
     width: 100%;
     height: $header-height;
+    margin-bottom: 2rem;
     background-color: $primary;
+    border-bottom: 3px solid $secondary;
+    font-family: 'Press Start 2P', cursive;
 
     .container {
       width: $container-width;
@@ -52,7 +58,10 @@ export default {
         justify-content: center;
 
         li {
-          margin: 0 1rem;
+          margin: 0 1.5rem;
+          padding: .3rem 1rem;
+          border: 3px solid $secondary;
+
           a {
             text-decoration: none;
             color: $secondary;
