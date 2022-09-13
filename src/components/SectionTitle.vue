@@ -19,7 +19,7 @@ export default {
   
   .title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     @include boolean-gradient-color();
     @include text-gradient-attributes();
   }

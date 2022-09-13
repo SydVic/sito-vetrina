@@ -7,12 +7,12 @@
       <ul class="nav-links">
         <li>
           <a href="">
-            ABOUT ME
+            About me
           </a>
         </li>
         <li>
-          <a href="">
-            WORKS
+          <a href="#boolean">
+            Boolean
           </a>
         </li>
       </ul>
@@ -30,9 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  // GOOGLE FONTS Press Start 2P
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+  @import "../style/_mixin.scss";
   @import "../style/_variables.scss";
 
   .header {
@@ -41,21 +39,16 @@ export default {
     margin-bottom: 2rem;
     background-color: $primary;
     border-bottom: 3px solid $secondary;
-    font-family: 'Press Start 2P', cursive;
 
     .container {
       width: $container-width;
       height: 100%;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-row-center-center();
 
       .nav-links {
         list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include flex-row-justify-center();
 
         li {
           margin: 0 1.5rem;
