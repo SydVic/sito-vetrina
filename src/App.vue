@@ -2,16 +2,20 @@
   <div id="app">
 
     <!-- HEADER -->
-    <AppHeader/>
+      <AppHeader/>
     <!-- /HEADER -->
 
-    <!-- CAROUSEL 3D -->
-    <carousel-3d>
-      <slide v-for="(object, index) in projects" :key="index" :index="index">
-        <img :src="require(`./assets/projects-images/${object.image}`)" alt="">
-      </slide>
-    </carousel-3d>
-    <!-- /CAROUSEL 3D -->
+    <!-- SECTION CAROUSEL -->
+      <SectionTitle :title="booleanTitle"/>
+
+      <!-- CAROUSEL 3D -->
+      <carousel-3d>
+        <slide v-for="(object, index) in projects" :key="index" :index="index">
+          <img :src="require(`./assets/projects-images/${object.image}`)" alt="">
+        </slide>
+      </carousel-3d>
+      <!-- /CAROUSEL 3D -->
+    <!-- /SECTION CAROUSEL -->
 
   </div>
 </template>
@@ -20,16 +24,19 @@
   import AppHeader from "./components/AppHeader.vue";
   import Vue from 'vue';
   import Carousel3d from 'vue-carousel-3d';
+  import SectionTitle from './components/SectionTitle.vue';
 
   Vue.use(Carousel3d);
 
   export default {
     name: 'App',
     components: {
-      AppHeader,
-    },
+    AppHeader,
+    SectionTitle,
+},
     data: function() {
       return {
+        booleanTitle: "Lavori Boolean",
         projects : [
         {
             title: "Bool B&B",

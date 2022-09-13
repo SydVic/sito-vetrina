@@ -1,0 +1,11 @@
+// per impostare il gradient al testo
+@mixin text-gradient-attributes {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// gradient con i colori boolean
+@mixin boolean-gradient-color {
+  background: rgb(53,53,236);
+  background: linear-gradient(8deg, rgba(53,53,236,1) 38%, rgba(0,222,107,1) 55%);
+}
