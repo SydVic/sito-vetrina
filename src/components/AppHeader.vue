@@ -1,8 +1,16 @@
 <template>
   <!-- HEADER -->
   <section class="header">
+
     <!-- CONTAINER -->
-    <div class="container-general">
+    <div class="container">
+
+      <!-- AVATAR -->
+      <div class="img-wrapper">
+        <img src="../assets/avatar/metal slug character.webp" alt="">
+      </div>
+      <!-- /AVATAR -->
+
       <!-- NAV LINKS -->
       <ul class="nav-links">
         <li>
@@ -17,6 +25,7 @@
         </li>
       </ul>
       <!-- NAV LINKS -->
+
     </div>
     <!-- /CONTAINER -->
   </section>
@@ -38,10 +47,18 @@ export default {
     height: $header-height;
     background-color: $primary;
     border-bottom: 3px solid $secondary;
+    padding: 0 2rem;
 
-    .container-general {
-      @include container-general();
+    .container {
+      height: 100%;
       @include flex-row-center-center();
+
+      .img-wrapper {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-right: auto;
+      }
 
       .nav-links {
         list-style: none;

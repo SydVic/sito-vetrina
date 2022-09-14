@@ -1,21 +1,25 @@
 <template>
-  <!-- CONTAINER -->
+  <!-- SECTION CONTAINER -->
   <section class="container-section" id="boolean">
 
-    <SectionTitle
-    :title="title"
-    :css="css"/>
+    <div class="container-general">
 
-    <!-- CAROUSEL 3D -->
-    <carousel-3d>
-      <slide v-for="(object, index) in projects" :key="index" :index="index">
-        <img :src="require(`../assets/projects-images/${object.image}`)" alt="">
-      </slide>
-    </carousel-3d>
-    <!-- /CAROUSEL 3D -->
+      <SectionTitle
+      :title="title"
+      :css="css"/>
+
+      <!-- CAROUSEL 3D -->
+      <carousel-3d>
+        <slide v-for="(object, index) in projects" :key="index" :index="index">
+          <img :src="require(`../assets/projects-images/${object.image}`)" alt="">
+        </slide>
+      </carousel-3d>
+      <!-- /CAROUSEL 3D -->
+
+    </div>
 
   </section>
-  <!-- /CONTAINER -->
+  <!-- /SECTION CONTAINER -->
 </template>
 
 <script>
@@ -86,5 +90,9 @@
   .container-section {
     @include container-section();
     @include boolean-background-gradient-color();
+
+    .container-general {
+      @include container-general();
+    }
   }
 </style>
