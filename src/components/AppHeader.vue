@@ -15,7 +15,7 @@
       <ul class="nav-links">
         <li>
           <a href="#about-me">
-            About me
+            Me
           </a>
         </li>
         <li>
@@ -68,6 +68,7 @@ export default {
           margin: 0 1.5rem;
           padding: .3rem 1rem;
           border: 3px solid $secondary;
+          font-size: .7rem;
 
           a {
             text-decoration: none;
