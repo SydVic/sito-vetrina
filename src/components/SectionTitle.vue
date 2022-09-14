@@ -24,12 +24,12 @@ export default {
   }
 
   .aboutme-title {
-    @include aboutme-gradient-color();
+    @include aboutme-text-gradient-color();
     @include text-gradient-attributes();
   }
 
   .boolean-title {
-    @include boolean-gradient-color();
+    @include boolean-text-gradient-color();
     @include text-gradient-attributes();
   }
 </style>

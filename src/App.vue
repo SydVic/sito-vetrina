@@ -5,18 +5,17 @@
       <AppHeader/>
     <!-- /HEADER -->
 
-    <!-- ABOUT ME SECTION -->
-    <AboutmeSection
-    :title="aboutmeTitle"
-    :css="aboutmeCssClass"/>
-    <!-- /ABOUT ME SECTION -->
-
     <!-- BOOLEAN SECTION -->
     <BooleanSection
     :title="booleanTitle"
     :css="booleanCssClass"/>
     <!-- /BOOLEAN SECTION -->
 
+    <!-- ABOUT ME SECTION -->
+    <AboutmeSection
+    :title="aboutmeTitle"
+    :css="aboutmeCssClass"/>
+    <!-- /ABOUT ME SECTION -->
 
   </div>
 </template>

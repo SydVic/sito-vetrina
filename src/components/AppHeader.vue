@@ -2,11 +2,11 @@
   <!-- HEADER -->
   <section class="header">
     <!-- CONTAINER -->
-    <div class="container">
+    <div class="container-general">
       <!-- NAV LINKS -->
       <ul class="nav-links">
         <li>
-          <a href="">
+          <a href="#about-me">
             About me
           </a>
         </li>
@@ -36,14 +36,11 @@ export default {
   .header {
     width: 100%;
     height: $header-height;
-    margin-bottom: 2rem;
     background-color: $primary;
     border-bottom: 3px solid $secondary;
 
-    .container {
-      width: $container-width;
-      height: 100%;
-      margin: 0 auto;
+    .container-general {
+      @include container-general();
       @include flex-row-center-center();
 
       .nav-links {

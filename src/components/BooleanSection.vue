@@ -1,6 +1,6 @@
 <template>
   <!-- CONTAINER -->
-  <div class="container" id="boolean">
+  <section class="container-section" id="boolean">
 
     <SectionTitle
     :title="title"
@@ -14,7 +14,7 @@
     </carousel-3d>
     <!-- /CAROUSEL 3D -->
 
-  </div>
+  </section>
   <!-- /CONTAINER -->
 </template>
 
@@ -79,6 +79,12 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  @import "../style/_variables.scss";
+  @import "../style/_mixin.scss";
 
+  .container-section {
+    @include container-section();
+    @include boolean-background-gradient-color();
+  }
 </style>

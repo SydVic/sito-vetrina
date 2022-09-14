@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <section class="container-section" id="about-me">
     <SectionTitle
     :title="title"
     :css="css"/>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -22,5 +22,12 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "../style/_variables.scss";
+  @import "../style/_mixin.scss";
+
+  .container-section {
+    @include container-section();
+    @include aboutme-background-gradient-color();
+  }
 
 </style>
