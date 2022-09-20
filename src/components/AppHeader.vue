@@ -92,6 +92,9 @@ export default {
     background-color: $primary;
     border-bottom: 3px solid $secondary;
     padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 
     .container {
       height: 100%;

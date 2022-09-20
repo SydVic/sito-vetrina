@@ -3,7 +3,7 @@
   <section class="container-section" id="boolean">
 
     <div class="container-general">
-+
+
       <SectionTitle
       :title="title"
       :css="css"/>
@@ -89,8 +89,8 @@
 
   .container-section {
     @include container-section();
-    // @include boolean-background-gradient-color();
-    background-color: $primary;
+    @include boolean-background-gradient-color();
+    // background-color: $primary;
 
     .container-general {
       @include container-general();

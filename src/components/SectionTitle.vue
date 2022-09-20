@@ -19,9 +19,11 @@ export default {
   @import "../style/_mixin.scss";
   
   .title {
+    margin-top: $header-height;
+    margin-bottom: 2rem;
     text-align: center;
     font-size: 2rem;
-    color: white;
+    color: $secondary;
     // @include text-gradient-color();
     // @include text-gradient-attributes();
   }
