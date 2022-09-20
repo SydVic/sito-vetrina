@@ -27,7 +27,8 @@
 
   .container-section {
     @include container-section();
-    @include aboutme-background-gradient-color();
+    // @include aboutme-background-gradient-color();
+    background-color: $primary;
   }
 
 </style>

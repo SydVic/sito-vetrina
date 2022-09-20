@@ -21,15 +21,9 @@ export default {
   .title {
     text-align: center;
     font-size: 2rem;
+    color: white;
+    // @include text-gradient-color();
+    // @include text-gradient-attributes();
   }
 
-  .aboutme-title {
-    @include aboutme-text-gradient-color();
-    @include text-gradient-attributes();
-  }
-
-  .boolean-title {
-    @include boolean-text-gradient-color();
-    @include text-gradient-attributes();
-  }
 </style>

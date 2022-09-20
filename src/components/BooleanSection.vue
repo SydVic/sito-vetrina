@@ -89,7 +89,8 @@
 
   .container-section {
     @include container-section();
-    @include boolean-background-gradient-color();
+    // @include boolean-background-gradient-color();
+    background-color: $primary;
 
     .container-general {
       @include container-general();

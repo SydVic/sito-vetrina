@@ -5,17 +5,21 @@
       <AppHeader/>
     <!-- /HEADER -->
 
+    <!-- ABOUT ME SECTION -->
+    <AboutmeSection
+    :title="aboutmeTitle"
+    :css="aboutmeCssClass"/>
+    <!-- /ABOUT ME SECTION -->
+
     <!-- BOOLEAN SECTION -->
     <BooleanSection
     :title="booleanTitle"
     :css="booleanCssClass"/>
     <!-- /BOOLEAN SECTION -->
 
-    <!-- ABOUT ME SECTION -->
-    <AboutmeSection
-    :title="aboutmeTitle"
-    :css="aboutmeCssClass"/>
-    <!-- /ABOUT ME SECTION -->
+    <!-- FOOTER -->
+    <AppFooter/>
+    <!-- /FOOTER -->
 
   </div>
 </template>
@@ -24,13 +28,15 @@
   import AppHeader from "./components/AppHeader.vue";
   import BooleanSection from "./components/BooleanSection.vue";
   import AboutmeSection from "./components/AboutmeSection.vue";
+  import AppFooter from "./components/AppFooter.vue";
 
   export default {
     name: 'App',
     components: {
     AppHeader,
     BooleanSection,
-    AboutmeSection
+    AboutmeSection,
+    AppFooter,
 },
   data: function() {
     return {
@@ -49,4 +55,6 @@
 
   @import "./style/_variables.scss";
   @import "./style/common.scss";
+  @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
 </style>
