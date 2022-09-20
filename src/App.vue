@@ -2,20 +2,24 @@
   <div id="app">
 
     <!-- HEADER -->
-      <AppHeader/>
+    <AppHeader/>
     <!-- /HEADER -->
 
     <!-- ABOUT ME SECTION -->
     <AboutmeSection
     :title="aboutmeTitle"
-    :css="aboutmeCssClass"/>
+    />
     <!-- /ABOUT ME SECTION -->
 
     <!-- BOOLEAN SECTION -->
     <BooleanSection
     :title="booleanTitle"
-    :css="booleanCssClass"/>
+    />
     <!-- /BOOLEAN SECTION -->
+
+    <SkillsSection
+    :title="skillsTitle"
+    />
 
     <!-- FOOTER -->
     <AppFooter/>
@@ -28,6 +32,7 @@
   import AppHeader from "./components/AppHeader.vue";
   import BooleanSection from "./components/BooleanSection.vue";
   import AboutmeSection from "./components/AboutmeSection.vue";
+  import SkillsSection from "./components/SkillsSection.vue";
   import AppFooter from "./components/AppFooter.vue";
 
   export default {
@@ -36,14 +41,16 @@
     AppHeader,
     BooleanSection,
     AboutmeSection,
+    SkillsSection,
     AppFooter,
 },
   data: function() {
     return {
       aboutmeTitle: "Su di me",
-      aboutmeCssClass: "aboutme-title",
+      // aboutmeCssClass: "aboutme-title",
       booleanTitle: "Lavori Boolean",
-      booleanCssClass: "boolean-title",
+      // booleanCssClass: "boolean-title",
+      skillsTitle: "Skills",
     }
   }
 }
@@ -55,6 +62,5 @@
 
   @import "./style/_variables.scss";
   @import "./style/common.scss";
-  @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 
 </style>

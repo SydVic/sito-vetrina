@@ -1,17 +1,18 @@
 // FONTAWESOME
-import { library } from '@fortawesome/fontawesome-svg-core';
-// ICONE HEADER
-import { faCode, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
-// ICONE FOOTER
-import { faGithub, faLinkedin, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+  import { library } from '@fortawesome/fontawesome-svg-core';
+  // icone header
+  import { faCode, faUserAstronaut, faLink, faUserGear } from '@fortawesome/free-solid-svg-icons';
+  // icone footer
+  import { faGithub, faLinkedin, faGoogle } from '@fortawesome/free-brands-svg-icons';
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-// ICONE HEADER
-library.add( faCode, faUserAstronaut );
-// ICONE FOOTER
-library.add( faGithub, faLinkedin, faGoogle );
+  // icone header
+  library.add( faCode, faUserAstronaut, faLink, faUserGear );
+  // icone footer
+  library.add( faGithub, faLinkedin, faGoogle );
 
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+  Vue.component('font-awesome-icon', FontAwesomeIcon);
+// FONTAWESOME
 
 import Vue from 'vue'
 import App from './App.vue'

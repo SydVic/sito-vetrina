@@ -3,7 +3,7 @@
   <section class="container-section" id="boolean">
 
     <div class="container-general">
-
++
       <SectionTitle
       :title="title"
       :css="css"/>
@@ -23,10 +23,10 @@
 </template>
 
 <script>
-    import Vue from 'vue';
-    import Carousel3d from 'vue-carousel-3d';
-    Vue.use(Carousel3d);
-    import SectionTitle from '../components/SectionTitle.vue';
+  import Vue from 'vue';
+  import Carousel3d from 'vue-carousel-3d';
+  Vue.use(Carousel3d);
+  import SectionTitle from '../components/SectionTitle.vue';
 
   export default {
     name: "BooleanSection",

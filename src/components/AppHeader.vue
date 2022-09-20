@@ -14,30 +14,19 @@
       <!-- NAV LINKS -->
       <ul class="nav-links">
         <!-- SCHERMO LG -->
-        <li class="lg">
-          <a href="#about-me">
-            Me
-          </a>
-        </li>
-        <li class="lg">
-          <a href="#boolean">
-            Boolean
+        <li v-for="(item, index) in headerLg" :key="index" class="lg">
+          <a :href="item.href">
+            {{ item.title }}
           </a>
         </li>
         <!-- /SCHERMO LG -->
 
         <!-- SCHERMO MD -->
-        <li class="md">
-          <a href="#about-me">
-            <font-awesome-icon icon="fa-solid fa-user-astronaut" />
+        <li v-for="(item, index) in headerMd" :key="'A' + index"  class="md">
+          <a :href="item.href">
+            <font-awesome-icon :icon="item.icon"/>
           </a>
         </li>
-        <li class="md">
-          <a href="#boolean">
-            <font-awesome-icon icon="fa-solid fa-code" />
-          </a>
-        </li>
-        <!-- /SCHERMO MD -->
       </ul>
       <!-- NAV LINKS -->
 
@@ -49,7 +38,47 @@
 
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data() {
+    return {
+      headerLg: [
+        {
+          title: "Me",
+          href: "#about-me",
+        },
+        {
+          title: "Boolean",
+          href: "#boolean",
+        },
+        {
+          title: "Skills",
+          href: "#skills"
+        },
+        {
+          title: "Links",
+          href: "#links",
+        },
+      ],
+      headerMd: [
+        {
+          href: "#about-me",
+          icon: "fa-solid fa-user-astronaut",
+        },
+        {
+          href: "#boolean",
+          icon: "fa-solid fa-code",
+        },
+        {
+          href: "#skills",
+          icon: "fa-solid fa-user-gear",
+        },
+        {
+          href: "#links",
+          icon: "fa-solid fa-link",
+        },
+      ],
+    }
+  }
 }
 </script>
 
@@ -79,7 +108,7 @@ export default {
         @include flex-row-justify-center();
 
         li {
-          margin: 0 1.5rem;
+          margin: 0 .5rem;
           // padding: .3rem 1rem;
           border: 3px solid $secondary;
           font-size: .7rem;
