@@ -11,13 +11,13 @@
       <!-- CAROUSEL 3D -->
       <carousel-3d>
         <slide v-for="(object, index) in projects" :key="index" :index="index">
-          <img :src="require(`../assets/projects-images/${object.image}`)" :alt="object.title" @click="changeCurrentSlide(index)">
+          <img :src="require(`../assets/projects-images/${object.image}`)" :alt="object.title" @click="changeCurrentSlideIndex(index)">
         </slide>
       </carousel-3d>
       <!-- /CAROUSEL 3D -->
 
       <!-- CAROUSEL CONTROLLERS AND DESCRIPTION -->
-      <div class="descritpion">
+      <div class="description">
         <p class="slide-text">
           {{ changeSlideDescritpion }}
         </p>
@@ -47,7 +47,7 @@
     },
     data: function() {
       return {
-        currentSlide: 0,
+        currentSlideIndex: 0,
         booleanTitle: "Lavori Boolean",
         projects : [
         {
@@ -58,55 +58,54 @@
           {
             title: "Playstation",
             image: "playstation.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet1",
           },
           {
             title: "Boolflix",
             image: "boolflix.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet2",
           },
           {
             title: "DC-Comics",
             image: "comics.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet3",
           },
           {
             title: "Azienda Spedizioni",
             image: "spedizioni.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet4",
           },
           {
             title: "Boolzap",
             image: "boolzap.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet5",
           },
           {
             title: "Dropbox",
             image: "dropbox.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet6",
           },
           {
             title: "Discord",
             image: "discord.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet7",
           },
           {
             title: "Spotify",
             image: "spotify.jpg",
-            description: "",
+            description: "lorem ipsum dolor sit amet8",
           },
         ]
       }
     },
     methods: {
-      changeCurrentSlide(index) {
-        console.log('click', index);
-        this.currentSlide = index;
+      changeCurrentSlideIndex(index) {
+        this.currentSlideIndex = index;
       },
     },
     computed: {
       changeSlideDescritpion() {
-        return this.projects[this.currentSlide].description;
+        return this.projects[this.currentSlideIndex].description;
       }
     }
   }
@@ -124,8 +123,21 @@
     .container-general {
       @include container-general();
 
-      .slide-text {
-        text-align: center;
+      .description {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .slide-text {
+          width: 362px;
+          text-align: center;
+          font-size: .8rem;
+          padding: 1rem;
+          border: 1px solid grey;
+          border-radius: 50px;
+          background-color: white;
+          color: $secondary;
+        }
       }
     }
   }
